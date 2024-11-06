@@ -1,6 +1,35 @@
+@font-face {
+	font-family: 'Digital-7Mono';
+	src: url('../font/Digital-7Mono.eot');
+	src: local('☺'), 
+       url('../font/Digital-7Mono.woff') format('woff'), 
+       url('../font/Digital-7Mono.ttf') format('truetype'),
+       url('../font/Digital-7Mono.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
+  width: 500px;
+  margin: 100px auto;
   background-color: #000000;
   font-family: Arial;
+  text-align: center;
+  border: 3px solid #ffffff;
+}
+
+.result {
+  width: 400px;
+  height: 100px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 3px solid #ffffff;
+  background-color: cadetblue;
+  color: #000000;
+  font-family: "Digital-7Mono";
+  font-size: 100px;
+  font-weight: bold;
+  text-align: right;
 }
 
 .calculate-button {

@@ -3,8 +3,9 @@
 let calculation = localStorage.getItem('calculation') || '';
 
 function updateCalculation(value) {
+  const resultElement = document.querySelector('.result');
   calculation += value;
-  console.log(calculation);
+  resultElement.innerHTML = calculation;
   localStorage.setItem('calculation', calculation);
 }
 

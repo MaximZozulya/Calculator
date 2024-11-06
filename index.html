@@ -7,23 +7,24 @@
     <title>Калькулятор</title>
   </head>
   <body>
+    <p class="result"></p>
     <p>
       <button class="calculate-button" onclick="updateCalculation('1')">1</button>
       <button class="calculate-button" onclick="updateCalculation('2')">2</button>
       <button class="calculate-button" onclick="updateCalculation('3')">3</button>
-      <button class="calculate-button action-button" onclick="updateCalculation(' + ')">+</button>
+      <button class="calculate-button action-button" onclick="updateCalculation('+')">+</button>
     </p>
     <p>
       <button class="calculate-button" onclick="updateCalculation('4')">4</button>
       <button class="calculate-button" onclick="updateCalculation('5')">5</button>
       <button class="calculate-button" onclick="updateCalculation('6')">6</button>
-      <button class="calculate-button action-button" onclick="updateCalculation(' - ')">-</button>
+      <button class="calculate-button action-button" onclick="updateCalculation('-')">-</button>
     </p>
     <p>
       <button class="calculate-button" onclick="updateCalculation('7')">7</button>
       <button class="calculate-button" onclick="updateCalculation('8')">8</button>
       <button class="calculate-button" onclick="updateCalculation('9')">9</button>
-      <button class="calculate-button action-button" onclick="updateCalculation(' * ')">x</button>
+      <button class="calculate-button action-button" onclick="updateCalculation('*')">x</button>
     </p>
     <p>
     <p>
@@ -31,14 +32,15 @@
       <button class="calculate-button" onclick="updateCalculation('.')">.</button>
       <button class="calculate-button" onclick="
         calculation  = eval(calculation);
-        console.log(calculation);
+        const resultElement = document.querySelector('.result');
+        resultElement.innerHTML = calculation;
         localStorage.setItem('calculation', calculation);">=</button>
-      <button class="calculate-button action-button" onclick="updateCalculation(' / ')">/</button>
+      <button class="calculate-button action-button" onclick="updateCalculation('/')">/</button>
     </p>
       <button class="calculate-button button-clear" onclick="
         calculation = '';
-        console.log(calculation);
-        localStorage.setItem('calculation', calculation);">Очистить</button>
+        updateCalculation(value)
+        saveCalculation()">Очистить</button>
     </p>
 
     <script src="js/main.js"></script>
